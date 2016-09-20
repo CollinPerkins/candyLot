@@ -88,7 +88,7 @@
 	            float: right;
 	            font-size: 18px;
 	            padding-top: 40px;
-	            padding-left: 40px;
+	            padding-left: 10px;
 	          }
 	          #left {
 	            float: left;
