@@ -89,6 +89,9 @@
 	            font-size: 18px;
 	            margin-bottom: 10px;
 	          }
+	          #left {
+	            float: left;
+	          }
 	          * {
 	            max-height: 85px;
 	          }
@@ -96,7 +99,7 @@
 	        </style>
 	      </head>
 	      <body>
-	      <div style="width: 50px float: left">
+	      <div style="width: 50px" id="left">
 	        ${$('#qr').html()}
 	      </div>
 	      <div id="right">
