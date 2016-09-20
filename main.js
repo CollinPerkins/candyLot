@@ -41,7 +41,8 @@ $(document).ready(function() {
           #right {
             float: right;
             font-size: 18px;
-            margin-bottom: 10px;
+            padding-top: 40px;
+            padding-left: 40px;
           }
           #left {
             float: left;
