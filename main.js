@@ -43,7 +43,7 @@ $(document).ready(function() {
             font-size: 18px;
           }
           * {
-            max-height: 100px;
+            max-height: 70px;
           }
 
         </style>
