@@ -32,9 +32,7 @@ $(document).ready(function() {
     //qrContainer.appendChild(qrCanvas);
     var w = window.open();
 
-    // * {
-    //   max-width: 150px;
-    // }
+
 
     w.document.write(`
       <html>
@@ -42,7 +40,10 @@ $(document).ready(function() {
         <style>
           #right {
             float: right;
-            font-size: 40px;
+            font-size: 18px;
+          }
+          * {
+            max-height: 100px;
           }
 
         </style>
