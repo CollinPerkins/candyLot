@@ -50,6 +50,7 @@ $(document).ready(function() {
       <html>
       <head>
         <style>
+          @page { size: auto;  margin: 0mm; }
           #right {
             float: right;
             font-size: 18px;
@@ -65,18 +66,20 @@ $(document).ready(function() {
       </head>
       <body>
         <div id="left">
-          <div style="width: 50px">
+          <div style="width: 50px; padding-left: 20px;">
             ${$('#qrUpc').html()}
           </div>
           <div>
+            UPC:
             ${qrUpc}
           </div>
         </div>
         <div id="right">
-          <div style="width: 50px">
+          <div style="width: 50px; padding-left: 20px;">
             ${$('#qrLot').html()}
           </div>
           <div>
+            Lot:
             ${qrLot}
           </div>
         </div>
