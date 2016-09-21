@@ -58,7 +58,7 @@ $(document).ready(function() {
             float: left;
           }
           * {
-            max-height: 85px;
+            max-height: 50px;
           }
 
         </style>
