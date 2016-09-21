@@ -121,7 +121,7 @@
 	          </div>
 	        </div>
 	        <div id="right">
-	          <div style="width: 50px; padding-left: 20px;">
+	          <div style="width: 50px; padding-left: 40px;">
 	            ${$('#qrLot').html()}
 	          </div>
 	          <div>
