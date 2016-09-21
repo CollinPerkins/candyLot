@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     console.log(qrLot);
     // qrcode Value
-    var qrcodeValue = qrcode(qrLot), {
+    var qrcodeValue = qrcode(qrLot.replace('"', "")), {
       type:  10
     });
 
