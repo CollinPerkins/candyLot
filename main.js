@@ -24,13 +24,13 @@ $(document).ready(function() {
 
     // qrcode Value
     var qrcodeValueLot = qrcode(qrLot, {
-      type:  10
+      type:  2
     });
     var qrcodeImageLot = new Image();
     qrcodeImageLot.src = qrcodeValueLot;
 
     var qrcodeValueUpc = qrcode(qrUpc, {
-      type:  10
+      type:  2
     });
 
     var qrcodeImageUpc = new Image();
