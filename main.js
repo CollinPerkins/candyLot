@@ -1,6 +1,7 @@
 // Webpack
 var qrcode = require('qr-encode');
 var qrLot;
+var qrUpc;
 
 $(document).ready(function() {
   var qrObject;
@@ -12,6 +13,7 @@ $(document).ready(function() {
       // Splits the GS128 string at the * place.
       qr = JSON.parse(qr);
       qrLot = qr.lot;
+      qrUpc = qr.sku;
     }
 
 
@@ -20,17 +22,23 @@ $(document).ready(function() {
   $("#generateQrcode").click(function(){
     // var qrCanvas = $("#qr").qrcode({width: 200,height: 200,text: JSON.stringify(GS128Object)});
 
-    console.log(qrLot);
     // qrcode Value
-    var qrcodeValue = qrcode(qrLot, {
+    var qrcodeValueLot = qrcode(qrLot, {
+      type:  10
+    });
+    var qrcodeImageLot = new Image();
+    qrcodeImageLot.src = qrcodeValueLot;
+
+    var qrcodeValueUpc = qrcode(qrUpc, {
       type:  10
     });
 
-    var qrcodeImage = new Image();
-    qrcodeImage.src = qrcodeValue;
+    var qrcodeImageUpc = new Image();
+    qrcodeImageUpc.src = qrcodeValueUpc;
+    // console.log(qrcodeValue);
 
-    console.log(qrcodeValue);
-    $('#qr').find('img').replaceWith(qrcodeImage);
+    $('#qrUpc').find('img').replaceWith(qrcodeImageUpc);
+    $('#qrLot').find('img').replaceWith(qrcodeImageLot);
     //qrContainer.appendChild(qrCanvas);
     //var qrCanvas = $("#qrImage").qrcode({ width: 200,height: 200,text: JSON.stringify(GS128Object)});
     //qrContainer.appendChild(qrCanvas);
@@ -45,8 +53,6 @@ $(document).ready(function() {
           #right {
             float: right;
             font-size: 18px;
-            padding-top: 35px;
-            padding-left: 20px;
           }
           #left {
             float: left;
@@ -58,12 +64,22 @@ $(document).ready(function() {
         </style>
       </head>
       <body>
-      <div style="width: 50px" id="left">
-        ${$('#qr').html()}
-      </div>
-      <div id="right">
-       Lot: ${qrLot}
-      <div>
+        <div id="left">
+          <div style="width: 50px">
+            ${$('#qrUpc').html()}
+          </div>
+          <div>
+            ${qrUpc}
+          </div>
+        </div>
+        <div id="right">
+          <div style="width: 50px">
+            ${$('#qrLot').html()}
+          </div>
+          <div>
+            ${qrLot}
+          </div>
+        </div>
       </body></html>`);
     w.print();
     w.close();
