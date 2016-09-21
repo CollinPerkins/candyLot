@@ -13,6 +13,8 @@ $(document).ready(function() {
       qr = JSON.parse(qr);
       qrLot = qr.lot;
     }
+
+    console.log(qrLot);
   });
 
   $("#generateQrcode").click(function(){
@@ -20,7 +22,7 @@ $(document).ready(function() {
 
     console.log(qrLot);
     // qrcode Value
-    var qrcodeValue = qrcode(JSON.stringify(qrLot), {
+    var qrcodeValue = qrcode(qrLot), {
       type:  10
     });
 
