@@ -99,7 +99,7 @@
 	          @page { size: auto;  margin: 0mm; }
 	          #right {
 	            float: right;
-	            font-size: 18px;
+	            font-size: 16px;
 	          }
 	          #left {
 	            float: left;
