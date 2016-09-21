@@ -59,6 +59,8 @@
 	      qr = JSON.parse(qr);
 	      qrLot = qr.lot;
 	    }
+
+
 	  });
 
 	  $("#generateQrcode").click(function(){
@@ -66,12 +68,14 @@
 
 	    console.log(qrLot);
 	    // qrcode Value
-	    var qrcodeValue = qrcode(JSON.stringify(qrLot), {
+	    var qrcodeValue = qrcode(qrLot, {
 	      type:  10
 	    });
 
 	    var qrcodeImage = new Image();
 	    qrcodeImage.src = qrcodeValue;
+
+	    console.log(qrcodeValue);
 	    $('#qr').find('img').replaceWith(qrcodeImage);
 	    //qrContainer.appendChild(qrCanvas);
 	    //var qrCanvas = $("#qrImage").qrcode({ width: 200,height: 200,text: JSON.stringify(GS128Object)});

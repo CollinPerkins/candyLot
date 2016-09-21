@@ -14,7 +14,7 @@ $(document).ready(function() {
       qrLot = qr.lot;
     }
 
-    console.log(qrLot);
+
   });
 
   $("#generateQrcode").click(function(){
@@ -22,12 +22,14 @@ $(document).ready(function() {
 
     console.log(qrLot);
     // qrcode Value
-    var qrcodeValue = qrcode(qrLot.replace('"', "")), {
+    var qrcodeValue = qrcode(qrLot, {
       type:  10
     });
 
     var qrcodeImage = new Image();
     qrcodeImage.src = qrcodeValue;
+
+    console.log(qrcodeValue);
     $('#qr').find('img').replaceWith(qrcodeImage);
     //qrContainer.appendChild(qrCanvas);
     //var qrCanvas = $("#qrImage").qrcode({ width: 200,height: 200,text: JSON.stringify(GS128Object)});
