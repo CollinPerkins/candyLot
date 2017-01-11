@@ -103,6 +103,7 @@
 	          }
 	          #left {
 	            float: left;
+	            font-size: 12px;
 	          }
 	          * {
 	            max-height: 50px;
