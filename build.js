@@ -99,7 +99,7 @@
 	          @page { size: auto;  margin: 0mm; }
 	          #right {
 	            float: right;
-	            font-size: 16px;
+	            font-size: 12px;
 	          }
 	          #left {
 	            float: left;
@@ -117,6 +117,7 @@
 	          </div>
 	          <div>
 	            UPC:
+	            <br>
 	            ${qrUpc}
 	          </div>
 	        </div>
@@ -126,6 +127,7 @@
 	          </div>
 	          <div>
 	            Lot:
+	            <br>
 	            ${qrLot}
 	          </div>
 	        </div>
